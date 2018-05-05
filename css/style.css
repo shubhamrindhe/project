@@ -1,0 +1,11 @@
+
+body{
+	padding:0;
+	margin:0;
+	background-color:#ccc;
+	
+	}
+canvas{
+	position:fixed;
+	z-index:-10;
+	}

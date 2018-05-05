@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Homepage</title>
+		
+		
+		<!--CDN-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--CDN-->
+		
+		
+		<!--stylesheets-->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="../../css/meny.css">
+			
+		<!--canvas-->
+		<script type="text/javascript" src="js/mouseInteractive.js"></script>
+		<!--canvas-->
+
+		<!--meny-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/meny/1.4.0/meny.js"></script>
+		<!--meny-->
+
+
+		<style>
+
+		.meny{
+			background-color: #222 ;
+		}
+
+		ul{
+			text-decoration-style: none;
+			padding-bottom: 70px;
+			padding-top: 70px;
+			list-style-type: none;
+
+		}
+		li{
+			padding-bottom: 20px;
+			padding-top: 20px;
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+
+		#mainimg{
+		/*background-image: url("img/hw7.gif");*/
+		height: 100vh;
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+		body{
+			padding:0;
+			margin:0; 
+		}
+		#typer{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform : translate(-50%,-50%);
+		}
+		
+		
+		
+		.typed::after {
+			content: '|';
+			display: inline;
+			-webkit-animation: blink 0.7s infinite;
+			-moz-animation: blink 0.7s infinite;
+			animation: blink 0.7s infinite;
+		}
+
+		/*Removes cursor that comes with typed.js*/
+		.typed-cursor{
+		   opacity: 0;
+			display: none;
+		}
+		/*Custom cursor animation*/
+		@keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-webkit-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-moz-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+	
+	
+ </style>
+
+
+
+
+	</head>
+	
+	
+	<body>
+			
+
+			<div class="meny">
+			    <!-- your menu items -->
+				<ul>
+					<li><a href="#"><span>Home</span></a></li>
+					<li><a href="pages/cl1/index.html">Programming Languages</a></li>
+					<li><a href="pages/cl1/bootstrap.html">Bootstrap</a></li>
+					<li><a href="pages/cl1/jq.html">jQuery</a></li>
+					<li><a href="https://threejs.org/">Three.js</a></li>
+					<li><a href="pages/cl1/ibmw.html">IBM Watson</a></li>	
+				  	<li><a href="pages/apps/doodle.html"><span class="glyphicon glyphicon-pencil"></span>  Doodle</a></li>
+					
+				</ul>
+			  </div>
+
+	
+
+<div class="contents">
+			    <!-- your page contents -->
+			  		
+			<canvas	id='canvas'></canvas>
+
+
+			<div id="mainimg">
+		<span id="typer">
+			<h3><span class="typed"></span></h3>
+		</span>		
+			
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
+	</div>
+	<script>
+		var quotes = [
+
+			"Sometimes it's the people no one <b>imagines</b> anything of who do the things that no one can <b>imagine</b>.<br>- Anonymous",
+			"if you can <b>Dream</b> it, you can <b>Do</b> it.<br>- Walt Disney",
+			"Don't <b>cry</b> because it's over, <b>smile</b> because it happened.<br>- Dr. Seuss",
+			"Those who can <b>imagine</b> anything, can create <b>the impossible</b>.<br>- Alan Turing",
+			"Moral indignation is <b>jealousy</b> with a <b>halo</b>.<br>- H. G. Wells",
+			"<b>Love</b> all, <b>trust</b> a few, do <b>wrong</b> to none.<br>- William Shakespeare",
+			"i've <b>failed</b> over and over in my life and that's why i <b>succeed</b>.<br>- Michael Jordan",
+			"I attribute my <b>success</b> to this : I <b>never</b> gave or took <b>excuse</b>.<br>- Florence Nightingale ",
+			"We must <b>belive</b> that we are gifted for something, and that this thing, at what ever cost must be <b>attained</b>.<br>- Marie Curie",
+			"All birds find shelter during <b>storm</b>, but eagle avoids it by <b>flying</b> above the clouds.Problems are common, but <b>attitude</b> makes the difference<br>- Dr.  A.P.J. Abdul Kalam",
+			"<b>Dreams</b> aren't that you see while sleeping it's something that don't let you <b>sleep</b><br>-  Dr.  A.P.J. Abdul Kalam",
+			"<b>Success</b> usually comes to those who are too <b>busy</b> looking for it.<br>- Henry Thoreau"
+
+		];
+
+		var techq = [
+
+			"Everyone should know how to <b>program</b> a computer, because it teaches you how to <b>think!</b><br>-Steve Jobs"
+
+
+		];
+		
+			//quotes[Math.floor(Math.random()*(quotes.length-1))]
+		
+			$(function(){
+				$(".typed").typed({
+					//strings: [ quotes[Math.floor(Math.random()*(quotes.length-1))] ],
+					
+					strings : techq, 
+
+					// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+					stringsElement: null,
+					// typing speed
+					typeSpeed: 15,
+					// time before typing starts
+					startDelay: 1200,
+					// backspacing speed
+					backSpeed: 20,
+					// time before backspacing
+					backDelay: 500,
+					// loop
+					loop: false,
+					// false = infinite
+					loopCount: false,
+					// show cursor
+					showCursor: true,
+					// character for cursor
+					cursorChar: "|",
+					// attribute to type (null == text)
+					attr: null,
+					// either html or text
+					contentType: 'html',
+					// call when done callback function
+					callback: function() {},
+					// starting callback function before each string
+					preStringTyped: function() {},
+					//callback for every typed string
+					onStringTyped: function() {},
+					// callback for reset
+					resetCallback: function() {}
+				});
+			});
+		
+		</script>
+
+
+
+
+			
+	
+		<script>
+		
+			var meny = Meny.create({
+	// The element that will be animated in from off screen
+	menuElement: document.querySelector( '.meny' ),
+
+	// The contents that gets pushed aside while Meny is active
+	contentsElement: document.querySelector( '.contents' ),
+
+	// The alignment of the menu (top/right/bottom/left)
+	position: 'left',
+
+	// The height of the menu (when using top/bottom position)
+	height: 200,
+
+	// The width of the menu (when using left/right position)
+	width: 260,
+
+	// The angle at which the contents will rotate to.
+	angle: 30,
+
+	// The mouse distance from menu position which can trigger menu to open.
+	threshold: 40,
+
+	// Width(in px) of the thin line you see on screen when menu is in closed position.
+	overlap: 6,
+
+	// The total time taken by menu animation.
+	transitionDuration: '0.5s',
+
+	// Transition style for menu animations
+	transitionEasing: 'ease',
+
+	// Gradient overlay for the contents
+	gradient: 'rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.65) 100%)',
+
+	// Use mouse movement to automatically open/close
+	mouse: true,
+
+	// Use touch swipe events to open/close
+	touch: true
+});
+		</script>		
+		
+		
+</div>		
+		
+		
+		
+	</body>
+</html>
