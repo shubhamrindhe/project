@@ -22,7 +22,7 @@
 		
 			
 			
-			init(500);
+			init(Math.floor((innerHeight*innerWidth)/(50*50)));
 			animate();
 		};
 		window.onresize = function(){
