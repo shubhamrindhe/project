@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  
+	  <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="materialize.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="animate.css">
+
+      <script type="text/javascript" >
+	  $(document).ready(function(){
+						$("#nav").height(window.innerHeight);
+						$("#content").height(window.innerHeight);		
+	  });
+	  </script>
+	 
+   <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+
+
+
+</head>
+<body>
+
+<div class="row">
+<!-- Left Part-->    	
+	<div class="col s3 z-depth-1" id="nav"  style="y-overflow:hidden">
+		<!--logo-->
+		<img src="img/jq.png" class="responsive-img">
+	<div class="row">
+
+		<ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">Designer</div>
+      <div class="collapsible-body">
+      	<span><p><a href="https://en.wikipedia.org/wiki/JavaScript">John Resig  
+</a></p></span>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">Developed By</div>
+      <div class="collapsible-body"><span><p> 	jQuery Team</p></span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Written in 	</div>
+      <div class="collapsible-body"><span><p> JavaScript</p></span></div>
+    </li>
+  </ul>		
+    </div>
+
+	</div>
+<!-- Left Part Ends -->	
+
+<div class="col s9 " style="">
+
+<header>
+		<h1 style="font-size: 150px;">jQ<sub style="font-size: 85px;">uery</sub></h1>
+
+	</header>
+
+	<section id="cd-timeline" class="cd-container">
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/jq.png" alt="Picture">
+			</div> 
+
+			<div class="cd-timeline-content">
+				<h2>First Appearance</h2>
+				<p>jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML.[3] It is free, open-source software using the permissive MIT License.[2] Web analysis indicates that it is the most widely deployed JavaScript library by a large margin.</p>
+				<a href="https://en.wikipedia.org/wiki/JavaScript" class="cd-read-more animated infinite pulse">Read more</a>
+				<span class="cd-date"> May 20, 2016</span>
+			</div> 
+		</div> 
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/jq.png" alt="Movie">
+			</div> 
+
+			<div class="cd-timeline-content">
+				<h2>Overview</h2>
+				<p>
+jQuery, at its core, is a Document Object Model (DOM) manipulation library. The DOM is a tree-structure representation of all the elements of a Web page. jQuery simplifies the syntax for finding, selecting, and manipulating these DOM elements. For example, jQuery can be used for finding an element in the document with a certain property (e.g. all elements with an h1 tag), changing one or more of its attributes (e.g. color, visibility), or making it respond to an event
+
+</p>
+				<a href="https://en.wikipedia.org/wiki/JavaScript" class="cd-read-more animated infinite pulse">Read more</a>
+				<span class="cd-date"></span>
+			</div> 
+		</div> 
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/jq.png" alt="Picture">
+			</div>
+			<div class="cd-timeline-content">
+				<h2> Versions</h2>
+				<p>     1.0 	August 26, 2006 	<br>
+						1.1 	January 14, 2007 		<br>	
+						1.2 	September 10, 2007 	<br>		
+						1.3 	January 14, 2009 	<br>
+						1.4 	January 14, 2010 	<br>		
+						1.5 	January 31, 2011 <br>
+						1.6 	May 3, 2011 	<br>
+						1.7 	November 3, 2011 <br>
+						1.8 	August 9, 2012 <br>
+						1.9 	January 15, 2013 	<br>
+						1.10 	May 24, 2013 	<br>
+						1.11 	January 24, 2014 	<br>
+						1.12 	January 8, 2016 		<br>
+						2.0 	April 18, 2013 	<br>
+						2.1 	January 24, 2014 	<br>	
+						2.2 	January 8, 2016 	<br>
+						3.0 	June 9, 2016 	<br>
+						3.1 	July 7, 2016 	<br>
+						3.2 	March 16, 2017 	</p>
+				<a href="https://en.wikipedia.org/wiki/JavaScript" class="cd-read-more animated infinite pulse">Read more</a>
+				<span class="cd-date"></span>
+			</div> 
+		</div> 
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/jq.png" alt="Location">
+			</div> 
+
+			<div class="cd-timeline-content">
+				<h2>Example Code Snippet</h2>
+				<p>
+					Sample Code
+					<blockquote>
+					<br><br><br>
+					  &lt script &gt <br>
+						$(document).ready(function(){<br>
+						 $("#msgid").html("This is Hello World by JQuery");<br>
+						});<br>
+					  &lt /script &gt <br>
+					<br><br><br>
+
+					</blockquote>
+				</p>
+				<a href="https://en.wikipedia.org/wiki/JavaScript" class="cd-read-more animated infinite pulse">Read more</a>
+				<span class="cd-date">First Program</span>
+			</div> 
+		</div> 
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/jq.png" alt="Location">
+			</div> 
+
+			<div class="cd-timeline-content">
+				<h2>Tutorials</h2>
+				<p>
+					For Tutorials Visit the below link!
+				</p>
+				<a href="Tutorials.html" class="cd-read-more animated infinite hinge">Click Here</a>
+				<span class="cd-date"></span>
+			</div> 
+		</div> 
+
+	</section>
+
+</div>
+
+</body>
+</html>

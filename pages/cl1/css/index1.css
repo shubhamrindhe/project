@@ -1,0 +1,20 @@
+
+#mainimg{
+	background-image: url("img/hw7.gif");
+	height: 100vh;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+hr{
+	display: block;
+	margin-top: 2em;
+	margin-right: 1em;
+	margin-left: 1em;
+	margin-bottom: 2em;
+	border-width: 2px;
+	border-style: inset;
+	color: red;
+}
